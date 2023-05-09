@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "GABRIEL LUCENA DA CUNHA",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -41.27,
+      "left": 118.85,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -133.65,
+      "left": 60.51,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    ["uno:13", "r1:2", "green", ["v-21.87", "h56.68"]],
+    ["r1:1", "bz1:2", "green", ["v0"]],
+    ["bz1:1", "uno:GND.1", "green", ["v63.65", "h26.78"]]
+  ],
+  "dependencies": {}
+}
