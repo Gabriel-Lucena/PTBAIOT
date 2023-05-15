@@ -1,3 +1,7 @@
+/*
+*   Link do Wokwi: https://wokwi.com/projects/364835716306681857
+*/
+
 int ThermistorPin = A0;
 int LedPin = 13;
 float R1 = 10000; // valor de R1 na placa
