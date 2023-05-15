@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-mini", "id": "bb1", "top": -39.8, "left": 343.2, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder1", "top": -79.37, "left": 40.8, "attrs": {} },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": -116.31,
+      "left": 276.7,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "encoder1:GND", "uno:GND.3", "black", [ "h0" ] ],
+    [ "encoder1:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "encoder1:SW", "uno:5", "orange", [ "h0" ] ],
+    [ "encoder1:DT", "uno:4", "green", [ "h0" ] ],
+    [ "encoder1:CLK", "uno:3", "purple", [ "h71.53", "v74.87" ] ]
+  ],
+  "dependencies": {}
+}
