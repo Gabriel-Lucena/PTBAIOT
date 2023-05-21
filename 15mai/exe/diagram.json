@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "GABRIEL LUCENA DA CUNHA",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 173.76, "left": -64.79, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder1", "top": 59.85, "left": -39.43, "attrs": {} }
+  ],
+  "connections": [
+    ["encoder1:CLK", "uno:2", "green", ["h0"]],
+    ["encoder1:DT", "uno:3", "gold", ["h0"]],
+    ["uno:4", "encoder1:SW", "purple", ["v0"]],
+    ["uno:5V", "encoder1:VCC", "red", ["v0"]],
+    ["uno:GND.2", "encoder1:GND", "black", ["v0"]]
+  ],
+  "dependencies": {}
+}
