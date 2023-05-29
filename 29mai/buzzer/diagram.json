@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "author": "GABRIEL LUCENA DA CUNHA",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -147.34,
+      "left": 84,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -79.86,
+      "left": 100.24,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -78.35,
+      "left": 60.32,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -91.99,
+      "left": 317.67,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "ldr1:VCC", "uno:5V", "red", [ "h18.43", "v-19.07", "h-277.92", "v355.44", "h163.82" ] ],
+    [
+      "ldr1:GND",
+      "uno:GND.2",
+      "black",
+      [ "h22.08", "v-33.46", "h-286.69", "v364.95", "h177.72" ]
+    ],
+    [ "ldr1:AO", "uno:A0", "green", [ "h22.08", "v306.87", "h-69.48" ] ],
+    [ "uno:GND.1", "led1:C", "black", [ "v0" ] ],
+    [ "led1:A", "uno:12", "gold", [ "v26.41", "h9.5" ] ],
+    [ "led2:C", "uno:GND.1", "black", [ "v24.65", "h39.52" ] ],
+    [ "led2:A", "uno:11", "green", [ "v12.94", "h55.46" ] ],
+    [ "bz1:1", "uno:GND.3", "black", [ "v228.86", "h-162.06" ] ],
+    [ "uno:13", "bz1:2", "magenta", [ "v-12.34", "h232.45" ] ]
+  ],
+  "dependencies": {}
+}
